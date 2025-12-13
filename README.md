@@ -79,3 +79,6 @@ This repository exists to:
 - Demonstrate practical knowledge across multiple languages
 - Explore computer science concepts in a creative and experimental way
 - Serve as a long-term **learning and portfolio project**
+
+--- 
+<p align="center"> ૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ </p>
