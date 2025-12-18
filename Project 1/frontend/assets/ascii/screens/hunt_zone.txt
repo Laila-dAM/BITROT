@@ -1,0 +1,26 @@
+################################################################################
+#                                                                              #
+#                                HUNT ZONE                                     #
+#                                                                              #
+################################################################################
+
+STATUS : HUNTING
+LEARN   : BOOLEAN LOGIC → COMPLEX CONDITIONS → CONSEQUENCES
+CONTROL : W / A / S / D
+SPACE   : NAVIGABLE
+TASK    : MAKE ETHICAL DECISIONS
+
+-------------------------------------------------------------------------------
+
+Choices:
+> TRACK ANIMAL
+  IGNORE
+  SET TRAP
+  RUN
+
+TIP:
+Every choice has consequences.
+Think logically and ethically.
+
+[ ENTER ] CONFIRM
+[ W / A / S / D ] MOVE

@@ -1,0 +1,26 @@
+################################################################################
+#                                                                              #
+#                               NIGHT ZONE                                      #
+#                                                                              #
+################################################################################
+
+STATUS : NIGHT OPERATIONS
+LEARN   : CONCEPT INTEGRATION → PROBLEM SOLVING → REAL FAILURES
+CONTROL : W / A / S / D
+SPACE   : NAVIGABLE
+TASK    : COMPLETE LONG MISSIONS
+
+-------------------------------------------------------------------------------
+
+Objectives:
+> INVESTIGATE
+  REPAIR
+  NAVIGATE
+  WAIT
+
+TIP:
+Night brings instability.
+Combine skills learned to succeed.
+
+[ ENTER ] CONFIRM
+[ W / A / S / D ] MOVE

@@ -1,0 +1,25 @@
+################################################################################
+#                                                                              #
+#                             WATCHTOWER TENT                                   #
+#                                                                              #
+################################################################################
+
+STATUS : MONITORING
+LEARN   : LOOPS → WHILE / FOR
+CONTROL : W / A / S / D
+SPACE   : NAVIGABLE
+TASK    : REPEAT MONITORING UNTIL CONDITION MET
+
+-------------------------------------------------------------------------------
+
+> PATROL SECTOR 1
+> PATROL SECTOR 2
+> PATROL SECTOR 3
+> AUTOMATE ROUTINE
+
+TIP:
+Manual repetition → tiring
+Loop command → efficient monitoring
+
+[ ENTER ] CONFIRM
+[ W / A / S / D ] MOVE

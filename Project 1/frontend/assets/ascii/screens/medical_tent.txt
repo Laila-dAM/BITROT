@@ -1,0 +1,30 @@
+################################################################################
+#                                                                              #
+#                              MEDICAL TENT                                     #
+#                                                                              #
+################################################################################
+
+STATUS : HEALING SYSTEMS
+LEARN   : DEBUG → ERROR HANDLING → VALIDATION
+CONTROL : W / A / S / D
+SPACE   : NAVIGABLE
+TASK    : IDENTIFY AND FIX ERRORS
+
+-------------------------------------------------------------------------------
+
+Errors detected:
+[ 404 ] Missing module
+[ 500 ] Internal error
+[ 403 ] Access denied
+
+Actions:
+> FIX
+> RESTART
+> VALIDATE
+
+TIP:
+Check messages carefully.
+Choose the correct action to prevent system collapse.
+
+[ ENTER ] CONFIRM
+[ W / A / S / D ] MOVE

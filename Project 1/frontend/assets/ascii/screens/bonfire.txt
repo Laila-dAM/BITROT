@@ -1,0 +1,24 @@
+################################################################################
+#                                                                              #
+#                              BONFIRE AREA                                     #
+#                                                                              #
+################################################################################
+
+STATUS : PUZZLE
+LEARN   : ALGORITHMS → SEQUENCE
+CONTROL : W / A / S / D
+SPACE   : NAVIGABLE
+TASK    : ORDER STEPS CORRECTLY
+
+-------------------------------------------------------------------------------
+
+> STEP 1 : PICK UP WOOD
+> STEP 2 : STACK WOOD
+> STEP 3 : LIGHT FIRE
+
+TIP:
+Correct order → FIRE IGNITES
+Wrong order   → TRY AGAIN
+
+[ ENTER ] CONFIRM
+[ W / A / S / D ] MOVE
