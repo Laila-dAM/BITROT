@@ -1,19 +1,24 @@
-# Interactive Programming Learning Platform (Web)
+# Escape 404
 
-Educational web game in ASCII style where learning programming organizes the world.
+A text-based educational RPG in ASCII.
 
-The player is taken to a technology camp and can only escape using the knowledge acquired during the game.
+## How to Run
 
-## Concept
-- Learning programming
-- Strange, light, and original humor
-- Terminal as a character
+1. Open `frontend/index.html` in a browser.
+2. Navigate menus with W/S or arrow keys.
+3. Confirm actions with Enter.
 
-## Technologies
-- Frontend: HTML, CSS, JavaScript
-- Backend: (to be defined in the future)
-- Database: SQL
-- Visual style: ASCII
+## Features
 
-## Project Status
-In planning (MVP being defined)
+- Camp hub
+- Challenges (Bonfire, Trail, Escape)
+- Simple command terminal
+- Leveling system
+- Educational gameplay
+
+## Controls
+
+- W / ArrowUp: Move up
+- S / ArrowDown: Move down
+- Enter: Confirm
+- R: Reset game

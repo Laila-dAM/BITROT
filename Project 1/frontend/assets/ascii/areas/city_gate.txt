@@ -1,6 +1,6 @@
 ################################################################################
 #                                                                              #
-#                              CITY GATE                                         #
+#                              CITY GATE                                       #
 #                                                                              #
 ################################################################################
 
@@ -16,8 +16,7 @@ You have reached the city.
 The camp's chaos ends here.
 Knowledge prevails over fear.
 
-> ENTER CITY
-  REVIEW STATS
+ENTER CITY
+REVIEW STATS
 
 [ ENTER ] CONFIRM
-[ W / A / S / D ] MOVE

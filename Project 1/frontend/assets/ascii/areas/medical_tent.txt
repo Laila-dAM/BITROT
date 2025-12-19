@@ -18,13 +18,12 @@ Errors detected:
 [ 403 ] Access denied
 
 Actions:
-> FIX
-> RESTART
-> VALIDATE
+FIX
+RESTART
+VALIDATE
 
 TIP:
 Check messages carefully.
 Choose the correct action to prevent system collapse.
 
 [ ENTER ] CONFIRM
-[ W / A / S / D ] MOVE

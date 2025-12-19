@@ -12,13 +12,12 @@ TASK    : CHOOSE THE CORRECT PATH
 
 -------------------------------------------------------------------------------
 
-> PATH A : DARK FOREST
-> PATH B : SUNNY GLADE
-> PATH C : MYSTIC STREAM
+PATH A : DARK FOREST
+PATH B : SUNNY GLADE
+PATH C : MYSTIC STREAM
 
 TIP:
 Wrong choice → YOU GET LOST
 Correct choice → PROGRESS FORWARD
 
 [ ENTER ] CONFIRM
-[ W / A / S / D ] MOVE

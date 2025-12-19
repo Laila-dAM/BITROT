@@ -13,13 +13,12 @@ TASK    : CREATE AND TEST FUNCTIONS
 -------------------------------------------------------------------------------
 
 Examples:
-> FUNCTION open_door(code)
-> FUNCTION collect_sample()
-> FUNCTION transmit_data()
+FUNCTION open_door(code)
+FUNCTION collect_sample()
+FUNCTION transmit_data()
 
 TIP:
 Reuse your functions to automate tasks.
 Observe input and output carefully.
 
 [ ENTER ] CONFIRM
-[ W / A / S / D ] MOVE

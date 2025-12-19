@@ -12,10 +12,10 @@ TASK    : REPEAT MONITORING UNTIL CONDITION MET
 
 -------------------------------------------------------------------------------
 
-> PATROL SECTOR 1
-> PATROL SECTOR 2
-> PATROL SECTOR 3
-> AUTOMATE ROUTINE
+PATROL SECTOR 1
+PATROL SECTOR 2
+PATROL SECTOR 3
+AUTOMATE ROUTINE
 
 TIP:
 Manual repetition → tiring

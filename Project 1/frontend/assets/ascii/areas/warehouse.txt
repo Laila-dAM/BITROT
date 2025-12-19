@@ -16,10 +16,10 @@ Items to organize:
 [ A ] [ B ] [ C ] [ D ] [ E ]
 
 Operations:
-> PUSH
-> POP
-> ENQUEUE
-> DEQUEUE
+PUSH
+POP
+ENQUEUE
+DEQUEUE
 
 TIP:
 Stack → last in, first out (LIFO)

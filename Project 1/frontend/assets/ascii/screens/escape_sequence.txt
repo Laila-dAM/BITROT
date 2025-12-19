@@ -1,7 +1,5 @@
 ################################################################################
-#                                                                              #
-#                            ESCAPE RUN FOREST                                 #
-#                                                                              #
+#                             ESCAPE RUN FOREST                                 #
 ################################################################################
 
 STATUS : ESCAPING
@@ -12,13 +10,12 @@ COLLISION: ENABLED
 
 -------------------------------------------------------------------------------
 
-MOVE UP
-MOVE LEFT
-MOVE DOWN
-MOVE RIGHT
+  MOVE UP
+  MOVE LEFT
+  MOVE DOWN
+  MOVE RIGHT
 
 TIP:
 Use everything you learned to overcome obstacles.
 
 [ ENTER ] CONFIRM
-[ W / A / S / D ] MOVE

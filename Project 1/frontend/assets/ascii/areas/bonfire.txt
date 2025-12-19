@@ -12,9 +12,9 @@ TASK    : ORDER STEPS CORRECTLY
 
 -------------------------------------------------------------------------------
 
-> STEP 1 : PICK UP WOOD
-> STEP 2 : STACK WOOD
-> STEP 3 : LIGHT FIRE
+STEP 1 : PICK UP WOOD
+STEP 2 : STACK WOOD
+STEP 3 : LIGHT FIRE
 
 TIP:
 Correct order → FIRE IGNITES

@@ -35,9 +35,9 @@ COLLISION: ENABLED
 
 -------------------------------------------------------------------------------
 
-> MOVE UP
-  MOVE LEFT
-  MOVE DOWN
-  MOVE RIGHT
+MOVE UP
+MOVE LEFT
+MOVE DOWN
+MOVE RIGHT
 
 [ ENTER ] CONFIRM

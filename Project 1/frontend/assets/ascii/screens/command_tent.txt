@@ -1,25 +1,18 @@
 ################################################################################
 #                                                                              #
-#                               NIGHT ZONE                                      #
+#                            COMMAND TENT                                      #
 #                                                                              #
 ################################################################################
 
-STATUS : NIGHT OPERATIONS
-LEARN   : CONCEPT INTEGRATION → PROBLEM SOLVING → REAL FAILURES
+STATUS : TUTORIAL
+LEARN   : INPUT / OUTPUT
 CONTROL : W / A / S / D
 SPACE   : NAVIGABLE
-TASK    : COMPLETE LONG MISSIONS
+COMMANDS: BASIC
+COMM    : SYSTEM INTERACTION
 
 -------------------------------------------------------------------------------
 
-Objectives:
-INVESTIGATE
-REPAIR
-NAVIGATE
-WAIT
+> TYPE A COMMAND BELOW:
 
-TIP:
-Night brings instability.
-Combine skills learned to succeed.
-
-[ ENTER ] CONFIRM
+[ ENTER ] EXECUTE

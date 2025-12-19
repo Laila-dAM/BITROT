@@ -1,0 +1,16 @@
+################################################################################
+#                              THE FOREST AMBUSH                                 #
+################################################################################
+
+STATUS   : PROCESS INTERRUPTED
+LEARN    : EVENT AUTOMATIC
+CONTROL  : LIMITED
+NOTES    : YOU LOST CONTROL
+
+-------------------------------------------------------------------------------
+
+TRY TO ESCAPE
+  STRUGGLE
+  OBSERVE
+
+[ ENTER ] CONFIRM

@@ -1,6 +1,6 @@
 ################################################################################
 #                                                                              #
-#                             ADVANCED CONTROL PANEL                             #
+#                             ADVANCED CONTROL PANEL                           #
 #                                                                              #
 ################################################################################
 
@@ -12,11 +12,10 @@ TASK    : MONITOR SYSTEM
 
 -------------------------------------------------------------------------------
 
-Options:
-> VIEW STATS
-  CHECK LOGS
-  DEPLOY UPDATE
-  REVIEW USERS
+VIEW STATS
+CHECK LOGS
+DEPLOY UPDATE
+REVIEW USERS
 
 TIP:
 Advanced systems require coordination.

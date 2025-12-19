@@ -18,8 +18,8 @@ NOTES    : MAP TRANSITION ENABLED
 
 -------------------------------------------------------------------------------
 
-> ENTER CAMP
-  EXPLORE SURROUNDINGS
-  CHECK INVENTORY
+ENTER CAMP
+EXPLORE SURROUNDINGS
+CHECK INVENTORY
 
 [ ENTER ] CONFIRM

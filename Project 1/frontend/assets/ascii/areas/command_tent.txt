@@ -13,10 +13,10 @@ COMM    : SYSTEM INTERACTION
 
 -------------------------------------------------------------------------------
 
-> TYPE "HELP"      → LIST COMMANDS
-> TYPE "START"     → BEGIN MISSION
-> TYPE "CLEAR"     → CLEAR SCREEN
-> TYPE "STATUS"    → SHOW CURRENT STATE
+TYPE "HELP"      → LIST COMMANDS
+TYPE "START"     → BEGIN MISSION
+TYPE "CLEAR"     → CLEAR SCREEN
+TYPE "STATUS"    → SHOW CURRENT STATE
 
 [ ENTER ] CONFIRM
 [ W / A / S / D ] MOVE
