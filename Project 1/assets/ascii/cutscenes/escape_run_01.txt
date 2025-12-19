@@ -1,0 +1,21 @@
+████████████████████████████████████
+█                                  █
+█   You RUN.                        █
+█                                  █
+█   Trees blur into lines.          █
+█                                  █
+█   ########      ###########      █
+█   #      #      #         #      █
+█   #  P   # ---> #    ?    # ---> █
+█   #      #      #         #      █
+█   ########      ###########      █
+█                                  █
+█   A branch blocks the path.       █
+█                                  █
+█   Condition not evaluated.       █
+█                                  █
+█   The forest waits for a choice. █
+█                                  █
+████████████████████████████████████
+
+[press ENTER]

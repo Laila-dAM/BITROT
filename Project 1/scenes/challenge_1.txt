@@ -1,0 +1,18 @@
+🖥️ Challenge 1: Basic Programming 🖥️
+
+   /)＿/)   
+　("˃ ᵕ ˂)        
+＿(__つ/￣￣￣/＿
+　　＼/　　　/
+              ￣￣￣
+              
+The teacher asks you to solve a puzzle:
+Print the correct sequence to unlock the gate.
+
+Options:
+1. print("Hello World")
+2. print("Open Gate")
+3. print("12345")
+4. print("Exit")
+
+Choose the correct command to continue.

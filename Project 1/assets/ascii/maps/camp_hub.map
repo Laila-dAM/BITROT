@@ -1,0 +1,33 @@
+CAMP HUB // CENTRAL AREA
+Movement enabled
+
+Explore the camp
+Return here between challenges
+
+            ┌───────────────┐
+            │   WATCHTOWER  │
+            └───────┬───────┘
+                    │
+      ┌─────────────┼─────────────┐
+      │             │             │
+┌───────────┐  ┌───────────┐  ┌───────────┐
+│  TENT A   │  │  TERMINAL │  │  TENT B   │
+│ Variables │  │  ACCESS   │  │ Condition │
+└───────────┘  └───────────┘  └───────────┘
+      │             │             │
+      └───────┬─────┴─────┬───────┘
+              │           │
+        ┌───────────┐  ┌───────────┐
+        │ BONFIRE    │  │ STORAGE   │
+        │ Algorithms │  │  DATA     │
+        └───────────┘  └───────────┘
+              │
+              │
+        ┌───────────┐
+        │   EXIT    │
+        │  FOREST   │
+        └───────────┘
+
+Legend:
+P  = Player start
+█  = Blocked area

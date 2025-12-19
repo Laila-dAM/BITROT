@@ -1,0 +1,22 @@
+████████████████████████████████████
+█                                  █
+█   Decision applied.               █
+█                                  █
+█   IF path == clear                █
+█      THEN run                     █
+█                                  █
+█   ########      ###########      █
+█   #      # ---> #           ---> █
+█   #      #      #     P           █
+█   #      # ---> #           ---> █
+█   ########      ###########      █
+█                                  █
+█   The branch is gone.             █
+█                                  █
+█   Logic reshaped the forest.      █
+█                                  █
+█   You don't slow down.            █
+█                                  █
+████████████████████████████████████
+
+[press ENTER]
