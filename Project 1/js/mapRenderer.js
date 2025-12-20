@@ -8,6 +8,11 @@ export function setMap(content) {
   draw()
 }
 
+export function isBlocked(x, y) {
+  if (!baseMap[y] || !baseMap[y][x]) return true
+  return baseMap[y][x] === "⣿"
+}
+
 export function draw() {
   const map = baseMap.map(line => line.split(""))
 
