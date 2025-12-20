@@ -1,0 +1,37 @@
+TRAIL // CONDITIONAL PATH
+Movement enabled
+
+Choose carefully
+Every path is evaluated
+
+              🌲      🌲
+          🌲        🌲        🌲
+      🌲        🌲      🌲
+              🌲      🌲
+
+                 P
+                 │
+           ┌─────┴─────┐
+           │           │
+        ┌─────┐     ┌─────┐
+        │ IF  │     │ ELSE│
+        └──┬──┘     └──┬──┘
+           │           │
+     🌿    │           │    🍂
+           │           │
+     ┌────────┐   ┌────────┐
+     │ CLEAR  │   │ BLOCKED│
+     │ PATH   │   │  PATH  │
+     └────┬───┘   └────┬───┘
+          │            │
+     🌱   │            │   🌵
+          │            │
+     ┌──────────┐  ┌──────────┐
+     │ PROCEED  │  │  RETURN  │
+     └──────────┘  └──────────┘
+
+Legend:
+🌿 / 🌱 = safe ground
+🍂 / 🌵 = unsafe ground
+
+EXIT ↓

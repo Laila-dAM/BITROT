@@ -1,0 +1,34 @@
+ADVANCED PANEL // SYSTEM METRICS
+Movement enabled
+
+The system is always running
+
+        ┌─────────────────────┐
+        │   PERFORMANCE       │
+        │   cpu:   stable     │
+        │   mem:   62%        │
+        │   io:    active     │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │   USER STATS        │
+        │   actions:  147    │
+        │   errors:   12     │
+        │   retries:  05     │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │   BACKEND STATUS    │
+        │   sync:  OK        │
+        │   save:  READY     │
+        │   flags: SET       │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │   AUDIT LOG         │
+        │   trace events     │
+        └─────────────────────┘
+
+EXIT ↑

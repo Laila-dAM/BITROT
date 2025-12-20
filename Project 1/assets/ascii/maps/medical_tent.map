@@ -1,0 +1,33 @@
+MEDICAL TENT // ERROR HANDLING
+Movement enabled
+
+Errors are not failures
+They are signals
+
+        ┌─────────────────────┐
+        │   DIAGNOSTIC PANEL  │
+        │                     │
+        │   error:  NULL      │
+        │   cause: UNKNOWN   │
+        │   status: ACTIVE   │
+        │                     │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │   TREATMENT TABLE   │
+        │   apply fix         │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │   ISOLATION ZONE    │
+        │  prevent cascade   │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  RECOVERY TERMINAL  │
+        │ restore safe state │
+        └─────────────────────┘
+
+EXIT ↑

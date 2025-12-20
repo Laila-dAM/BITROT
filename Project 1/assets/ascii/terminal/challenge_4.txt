@@ -1,0 +1,15 @@
+CHALLENGE 04 // REPEAT
+Input required
+
+>_
+
+One action must happen
+more than once.
+
+Stopping too early
+changes nothing.
+
+Stopping too late
+changes everything.
+
+Know when to end.

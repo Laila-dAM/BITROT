@@ -1,11 +1,13 @@
-async function loadScene(sceneName) {
-    const response = await fetch(`scenes/${sceneName}.txt`);
-    const text = await response.text();
-    document.getElementById("ascii-scene").textContent = text;
-    GameState.currentScene = sceneName;
+import { loadText } from "./loader.js"
+
+const scenes = {
+  title: "assets/ascii/ui/title.txt",
+  forest: "assets/ascii/maps/forest_start.map",
+  camp: "assets/ascii/maps/camp_hub.map"
 }
 
-function nextScene(sceneName) {
-    loadScene(sceneName);
-    saveProgress();
+export function loadScene(name) {
+  const path = scenes[name]
+  if (!path) return
+  loadText(path)
 }

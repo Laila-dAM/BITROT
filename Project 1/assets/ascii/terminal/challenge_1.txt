@@ -1,0 +1,15 @@
+CHALLENGE 01 // COMMAND INPUT
+Input required
+
+The terminal waits.
+
+>_
+
+A single word will respond.
+
+Not loud.
+Not complex.
+
+Correct input unlocks the path.
+
+The system does not guess.

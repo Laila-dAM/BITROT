@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
     <div id="game-container">
-        <pre id="ascii-scene">
-            Welcome to BITROT!
-            Your adventure begins in the forest...
+        <pre id="screen">
+Welcome to BITROT!
+Your adventure begins in the forest...
         </pre>
+
         <div id="controls">
-            <button id="start-btn">Start</button>
+            <button id="startButton">Start</button>
         </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <script type="module">
+        import { loadScene } from "./js/sceneManager.js"
+
+        const startButton = document.getElementById("startButton")
+
+        startButton.addEventListener("click", () => {
+            loadScene("forest")
+        })
+    </script>
+
 </body>
 </html>

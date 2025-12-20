@@ -1,0 +1,29 @@
+COMMUNICATIONS ROOM // INPUT / OUTPUT
+Movement enabled
+
+Signals come in
+Signals go out
+
+        ┌─────────────────────┐
+        │   INPUT CONSOLE     │
+        │   receive data     │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │   FILTER MODULE     │
+        │ remove noise        │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │  OUTPUT TERMINAL    │
+        │ send response       │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  SIGNAL LOGS        │
+        │ inspect traffic    │
+        └─────────────────────┘
+
+EXIT ↑

@@ -1,0 +1,38 @@
+NIGHT SIMULATION ZONE // INTEGRATION
+Movement enabled
+
+All systems active
+Nothing is isolated
+
+        ┌─────────────────────┐
+        │   INPUT STREAM      │
+        │   live signals      │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  DECISION CORE      │
+        │  if / else / loop   │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │  STATE MATRIX       │
+        │  values shifting   │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │ ERROR FIELD         │
+        │ unstable behavior  │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  OUTPUT FEED        │
+        │ delayed response   │
+        └─────────────────────┘
+
+        ███████████████████████
+        █  SIMULATION LOOP    █
+        ███████████████████████
+
+EXIT ↑

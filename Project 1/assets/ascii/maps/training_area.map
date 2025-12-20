@@ -1,0 +1,33 @@
+TRAINING AREA // DEBUG ZONE
+Movement enabled
+
+Nothing is final here
+Observe. Test. Repeat.
+
+        ┌─────────────────────┐
+        │   STATUS PANEL      │
+        │                     │
+        │   health:  OK       │
+        │   energy:  LOW      │
+        │   logic:   ?        │
+        │                     │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │    TEST CONSOLE     │
+        │   run scenarios    │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │   BREAKPOINT ZONE   │
+        │  execution paused  │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │    LOG VIEWER       │
+        │  inspect failures  │
+        └─────────────────────┘
+
+EXIT ↑

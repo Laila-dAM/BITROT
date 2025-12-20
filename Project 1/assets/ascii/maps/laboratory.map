@@ -1,0 +1,29 @@
+LABORATORY // FUNCTIONS
+Movement enabled
+
+Reuse what works
+Abstract the process
+
+        ┌─────────────────────┐
+        │   FUNCTION INPUT    │
+        │   parameters set   │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  PROCESS CHAMBER    │
+        │  logic executed    │
+        └─────────┬───────────┘
+                  │
+              P   │
+                  │
+        ┌─────────────────────┐
+        │  RETURN OUTPUT      │
+        │   value delivered  │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │  FUNCTION LIBRARY   │
+        │ reusable modules   │
+        └─────────────────────┘
+
+EXIT ↑

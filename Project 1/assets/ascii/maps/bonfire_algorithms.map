@@ -1,0 +1,34 @@
+BONFIRE // ALGORITHMS SECTOR
+Movement enabled
+
+Observe patterns
+Repeat until stable
+
+            🌲      🌲      🌲
+        🌲        🌲      🌲        🌲
+    🌲        🌲      🌲        🌲
+            🌲      🌲      🌲
+
+               🔥🔥🔥
+               🔥🔥🔥
+               🔥🔥🔥
+
+        ⟳    ⟳    ⟳    ⟳    ⟳
+
+      ┌───────────────┐
+      │   LOOP PATH   │
+      └───────┬───────┘
+              │
+     ┌─────────────────────┐
+     │   STEP 1 → STEP 2   │
+     │       → STEP 3      │
+     └─────────────────────┘
+              │
+     ┌─────────────────────┐
+     │  UNTIL CONDITION    │
+     │      IS MET         │
+     └─────────────────────┘
+
+        🌱        🌱        🌱
+
+EXIT ↑

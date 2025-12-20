@@ -1,0 +1,14 @@
+CHALLENGE 02 // LOGIC SEQUENCE
+Input required
+
+>_
+
+One action is not enough.
+
+The order matters.
+
+The system will execute
+exactly what you give it.
+
+Nothing more.
+Nothing less.

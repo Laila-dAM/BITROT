@@ -1,0 +1,14 @@
+CHALLENGE 07 // INTEGRATION
+Input required
+
+>_
+
+The system is active.
+
+State is unstable.
+Input is noisy.
+Timing matters.
+
+There is no single command.
+
+You know what to do.

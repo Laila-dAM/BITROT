@@ -1,0 +1,30 @@
+WATCHTOWER // LOOPS
+Movement enabled
+
+Repeat to advance
+Stop at the right time
+
+           ┌─────────┐
+           │  LEVEL 3 │
+           └─────┬───┘
+                 │
+           ┌─────────┐
+           │  LEVEL 2 │
+           └─────┬───┘
+                 │
+           ┌─────────┐
+           │  LEVEL 1 │
+           └─────┬───┘
+                 │
+                 P
+                 │
+           ┌─────────┐
+           │  GROUND │
+           └─────────┘
+
+      ⟳ climb ⟳ climb ⟳ climb
+
+If you climb too far:
+LOOP OVERFLOW
+
+EXIT ↓

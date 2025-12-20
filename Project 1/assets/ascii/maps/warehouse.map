@@ -1,0 +1,34 @@
+WAREHOUSE // DATA STRUCTURES
+Movement enabled
+
+Store wisely
+Access has a cost
+
+        ┌───────────────┐
+        │     STACK     │
+        │   [ TOP ]     │
+        │     [ ]       │
+        │     [ ]       │
+        │   [ BOTTOM ]  │
+        └───────┬───────┘
+                │
+        ┌───────────────┐
+        │     QUEUE     │
+        │   FRONT →    │
+        │   [ ] [ ]    │
+        │        ← REAR│
+        └───────┬───────┘
+                │
+            P   │
+                │
+        ┌───────────────┐
+        │     ARRAY     │
+        │ [0][1][2][3]  │
+        └───────┬───────┘
+                │
+        ┌───────────────┐
+        │     MAP       │
+        │ key → value   │
+        └───────────────┘
+
+EXIT ↑

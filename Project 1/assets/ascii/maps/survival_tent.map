@@ -1,0 +1,33 @@
+SURVIVAL TENT // VARIABLES & STATE
+Movement enabled
+
+Everything here persists
+Change is remembered
+
+        ┌─────────────────────┐
+        │   STORAGE SHELF     │
+        │                     │
+        │   water:  02        │
+        │   food:   01        │
+        │   energy: 05        │
+        │                     │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │     SLEEP MAT       │
+        │   restore energy   │
+        └─────────┬───────────┘
+                  │
+            P     │
+                  │
+        ┌─────────────────────┐
+        │     WORK TABLE      │
+        │  modify resources  │
+        └─────────┬───────────┘
+                  │
+        ┌─────────────────────┐
+        │   SAVE TERMINAL     │
+        │   state preserved  │
+        └─────────────────────┘
+
+EXIT ↑

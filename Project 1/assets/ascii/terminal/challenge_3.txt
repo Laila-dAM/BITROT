@@ -1,0 +1,13 @@
+CHALLENGE 03 // CONDITIONAL
+Input required
+
+>_
+
+Two paths are available.
+
+Only one matches
+the current state.
+
+The system will not warn you.
+
+Choose.
