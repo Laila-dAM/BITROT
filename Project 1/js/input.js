@@ -1,5 +1,5 @@
 import { state, movePlayer } from "./state.js"
-import { loadScene } from "./sceneManager.js"
+import { draw } from "./mapRenderer.js"
 
 export function initInput() {
   document.addEventListener("keydown", handleKey)
@@ -15,4 +15,5 @@ function handleKey(e) {
   if (e.key === "d") x += 1
 
   movePlayer(x, y)
+  draw()
 }

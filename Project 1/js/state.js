@@ -1,8 +1,8 @@
 export const state = {
   scene: "title",
   player: {
-    x: 0,
-    y: 0
+    x: 5,
+    y: 5
   },
   xp: 0,
   status: "STABLE",
