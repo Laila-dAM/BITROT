@@ -1,5 +1,5 @@
 import { renderText } from "./renderer.js"
-import { checkAnswer, clearChallenge, getReward } from "./challenges.js"
+import { checkAnswer, clearChallenge, getReward, applyUnlock } from "./challenges.js"
 import { addXP } from "./state.js"
 
 let buffer = ""
@@ -28,6 +28,7 @@ export function handleTerminalInput(key) {
     if (checkAnswer(buffer)) {
       const xp = getReward()
       addXP(xp)
+      applyUnlock()
       message = `Success +${xp} XP`
       clearChallenge()
       setTimeout(() => closeTerminal(), 1000)

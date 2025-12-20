@@ -38,3 +38,12 @@ export function loadProgress() {
     Object.assign(state, JSON.parse(saved))
   }
 }
+
+export function setFlag(name) {
+  state.flags[name] = true
+  saveProgress()
+}
+
+export function hasFlag(name) {
+  return !!state.flags[name]
+}
