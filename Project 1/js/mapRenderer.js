@@ -1,5 +1,6 @@
 import { state } from "./state.js"
 import { renderText } from "./renderer.js"
+import { getNPCAt } from "./npc.js"
 
 let baseMap = []
 
@@ -22,11 +23,20 @@ export function isBlocked(x, y) {
 export function draw() {
   const map = baseMap.map(line => line.split(""))
 
-  const x = state.player.x
-  const y = state.player.y
+  for (let y = 0; y < map.length; y++) {
+    for (let x = 0; x < map[y].length; x++) {
+      const npc = getNPCAt(x, y)
+      if (npc) {
+        map[y][x] = "૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა"
+      }
+    }
+  }
 
-  if (map[y] && map[y][x]) {
-    map[y][x] = "( •_• )"
+  const px = state.player.x
+  const py = state.player.y
+
+  if (map[py] && map[py][px]) {
+    map[py][px] = "( •_• )"
   }
 
   const output = map.map(line => line.join("")).join("\n")
