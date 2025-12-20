@@ -1,4 +1,5 @@
 import { loadText } from "./loader.js"
+import { setScene } from "./state.js"
 
 const scenes = {
   title: "assets/ascii/ui/title.txt",
@@ -9,5 +10,6 @@ const scenes = {
 export function loadScene(name) {
   const path = scenes[name]
   if (!path) return
+  setScene(name)
   loadText(path)
 }
