@@ -8,9 +8,15 @@ export function setMap(content) {
   draw()
 }
 
+export function getTile(x, y) {
+  if (!baseMap[y] || !baseMap[y][x]) return null
+  return baseMap[y][x]
+}
+
 export function isBlocked(x, y) {
-  if (!baseMap[y] || !baseMap[y][x]) return true
-  return baseMap[y][x] === "⣿"
+  const tile = getTile(x, y)
+  if (!tile) return true
+  return tile === "⣿"
 }
 
 export function draw() {
