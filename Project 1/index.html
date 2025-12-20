@@ -21,11 +21,13 @@ Your adventure begins in the forest...
 
     <script type="module">
         import { loadScene } from "./js/sceneManager.js"
+        import { initInput } from "./js/input.js"
 
         const startButton = document.getElementById("startButton")
 
         startButton.addEventListener("click", () => {
             loadScene("forest")
+            initInput()
         })
     </script>
 
