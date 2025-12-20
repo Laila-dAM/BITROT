@@ -5,6 +5,7 @@ export const state = {
     y: 5
   },
   xp: 0,
+  level: 1,
   status: "STABLE",
   inventory: [],
   flags: {}
@@ -21,10 +22,10 @@ export function movePlayer(x, y) {
 
 export function addXP(value) {
   state.xp += value
-}
-
-export function setStatus(value) {
-  state.status = value
+  if (state.xp >= state.level * 100) {
+    state.level += 1
+  }
+  saveProgress()
 }
 
 export function saveProgress() {
