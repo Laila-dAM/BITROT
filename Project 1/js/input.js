@@ -2,12 +2,19 @@ import { state, movePlayer } from "./state.js"
 import { draw, isBlocked, getTile } from "./mapRenderer.js"
 import { handleTrigger } from "./triggers.js"
 import { handleTerminalInput, isTerminalActive } from "./terminal.js"
+import { isCutsceneActive, handleCutsceneInput } from "./cutscene.js"
 
 export function initInput() {
   document.addEventListener("keydown", handleKey)
 }
 
 function handleKey(e) {
+  if (isCutsceneActive()) {
+    handleCutsceneInput(e.key)
+    draw()
+    return
+  }
+
   if (isTerminalActive()) {
     handleTerminalInput(e.key)
     return
