@@ -4,7 +4,7 @@ const npcs = {
   professor: {
     x: 10,
     y: 6,
-    dialogue: "assets/ascii/dialogues/professor_intro.txt"
+    dialogue: "assets/ascii/dialogues/professor_branch.json"
   }
 }
 

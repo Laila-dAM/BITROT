@@ -1,0 +1,33 @@
+{
+  "start": {
+    "text": [
+      "Professor:",
+      "So you want to escape?",
+      "Tell me..."
+    ],
+    "choices": {
+      "1": {
+        "text": "I want to learn.",
+        "next": "learn_path",
+        "flag": "chose_learn"
+      },
+      "2": {
+        "text": "I want to escape.",
+        "next": "escape_path",
+        "flag": "chose_escape"
+      }
+    }
+  },
+  "learn_path": {
+    "text": [
+      "Good.",
+      "Knowledge is power."
+    ]
+  },
+  "escape_path": {
+    "text": [
+      "Interesting.",
+      "Let's see how far you go."
+    ]
+  }
+}
