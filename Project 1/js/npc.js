@@ -25,7 +25,10 @@ const npcs = {
 }
 
 export function getNPCAt(x, y) {
-  return Object.values(npcs).find(n => n.x === x && n.y === y)
+  return Object.values(npcs).find(n => {
+    if (n.type === "professor" && state.flags.chose_escape) return false
+    return n.x === x && n.y === y
+  })
 }
 
 export function interactWithNPC(npc) {
@@ -44,5 +47,7 @@ export function interactWithNPC(npc) {
     return
   }
 
-  openDialogue(npc.dialogue)
+  if (npc.dialogue) {
+    openDialogue(npc.dialogue)
+  }
 }

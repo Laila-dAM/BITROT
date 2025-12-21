@@ -1,4 +1,4 @@
-import { state } from "./state.js"
+import { state, isGameOver } from "./state.js"
 import { renderText } from "./renderer.js"
 import { getNPCAt } from "./npc.js"
 
@@ -17,10 +17,19 @@ export function getTile(x, y) {
 export function isBlocked(x, y) {
   const tile = getTile(x, y)
   if (!tile) return true
-  return tile === "⣿"
+
+  if (tile === "⣿") return true
+  if (tile === "#" && !state.flags.camp_access) return true
+
+  return false
 }
 
 export function draw() {
+  if (isGameOver()) {
+    renderText("GAME OVER\n\nYou escaped without learning.")
+    return
+  }
+
   const map = baseMap.map(line => line.split(""))
 
   for (let y = 0; y < map.length; y++) {

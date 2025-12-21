@@ -29,5 +29,15 @@ Return here between challenges
         └───────────┘
 
 Legend:
-P  = Player start
 █  = Blocked area
+#  = Locked gate
+?  = Unlock trigger
+
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿        #                    ⣿
+⣿   ?                         ⣿
+⣿                              ⣿
+⣿                              ⣿
+⣿        #                    ⣿
+⣿                              ⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
