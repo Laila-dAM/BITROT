@@ -25,4 +25,9 @@ export function handleTrigger(tile) {
     setFlag("camp_access")
     return
   }
+
+  if (tile === "E") {
+    setFlag("escaped")
+    return
+  }
 }

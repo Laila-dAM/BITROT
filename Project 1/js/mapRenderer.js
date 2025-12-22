@@ -2,6 +2,7 @@ import { state, isGameOver } from "./state.js"
 import { renderText } from "./renderer.js"
 import { getNPCAt } from "./npc.js"
 import { getChapter, getChapterTitle } from "./chapter.js"
+import { getEnding } from "./ending.js"
 
 let baseMap = []
 
@@ -29,6 +30,14 @@ export function isBlocked(x, y) {
 export function draw() {
   if (isGameOver()) {
     renderText("GAME OVER\n\nYou escaped without learning.")
+    return
+  }
+
+  const ending = getEnding()
+  if (ending) {
+    fetch(`assets/ascii/endings/${ending}_ending.txt`)
+      .then(r => r.text())
+      .then(renderText)
     return
   }
 
