@@ -1,6 +1,7 @@
 import { state, isGameOver } from "./state.js"
 import { renderText } from "./renderer.js"
 import { getNPCAt } from "./npc.js"
+import { getChapter, getChapterTitle } from "./chapter.js"
 
 let baseMap = []
 
@@ -20,6 +21,7 @@ export function isBlocked(x, y) {
 
   if (tile === "⣿") return true
   if (tile === "#" && !state.flags.camp_access) return true
+  if (tile === "E" && getChapter() < 3) return true
 
   return false
 }
@@ -48,6 +50,8 @@ export function draw() {
     map[py][px] = "( •_• )"
   }
 
-  const output = map.map(line => line.join("")).join("\n")
-  renderText(output)
+  const body = map.map(line => line.join("")).join("\n")
+  const header = getChapterTitle() ? getChapterTitle() + "\n\n" : ""
+
+  renderText(header + body)
 }

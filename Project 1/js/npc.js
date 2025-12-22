@@ -1,5 +1,6 @@
 import { openDialogue } from "./dialogue.js"
 import { state } from "./state.js"
+import { getChapter } from "./chapter.js"
 
 const npcs = {
   professor: {
@@ -34,14 +35,21 @@ export function getNPCAt(x, y) {
 export function interactWithNPC(npc) {
   if (!npc) return
 
+  const chapter = getChapter()
+
+  if (npc.type === "survivor" && chapter === 3) {
+    return
+  }
+
   if (npc.type === "professor") {
     let path = "assets/ascii/dialogues/professor_xp_low.json"
 
     if (state.xp >= 50) path = "assets/ascii/dialogues/professor_xp_mid.json"
     if (state.xp >= 100) path = "assets/ascii/dialogues/professor_xp_high.json"
     if (state.flags.chose_escape) path = "assets/ascii/dialogues/professor_escape.json"
-    if (state.flags.chose_learn && state.xp >= 100)
+    if (state.flags.chose_learn && state.xp >= 100) {
       path = "assets/ascii/dialogues/professor_learning.json"
+    }
 
     openDialogue(path)
     return
