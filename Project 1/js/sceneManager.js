@@ -1,5 +1,6 @@
 import { loadText } from "./loader.js"
 import { setScene } from "./state.js"
+import { renderText } from "./renderer.js"
 
 const scenes = {
   title: "assets/ascii/ui/title.txt",
@@ -10,6 +11,14 @@ const scenes = {
 export function loadScene(name) {
   const path = scenes[name]
   if (!path) return
-  setScene(name)
-  loadText(path)
+
+  fadeTransition(() => {
+    setScene(name)
+    loadText(path)
+  })
+}
+
+export function fadeTransition(next) {
+  renderText("\n\n...\n\n", false)
+  setTimeout(next, 400)
 }
