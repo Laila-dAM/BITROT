@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "auth/auth.h"
 
 int main() {
     bool running = true;
@@ -12,7 +13,12 @@ int main() {
         std::getline(std::cin, option);
 
         if (option == "1") {
-            std::cout << "Login selected\n";
+            User currentUser;
+            if (login(currentUser)) {
+                std::cout << "Logged in as: " << currentUser.username << "\n";
+            } else {
+                std::cout << "Invalid credentials\n";
+            }
         } else if (option == "2") {
             running = false;
         } else {
