@@ -1,9 +1,30 @@
 #include <iostream>
 #include <string>
+
 #include "auth/auth.h"
 #include "cli/menu.h"
+#include "db/database.h"
 
 int main() {
+    Database db("data/inventory.db");
+
+    db.execute(
+        "CREATE TABLE IF NOT EXISTS users ("
+        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "username TEXT UNIQUE,"
+        "password TEXT,"
+        "role TEXT);"
+    );
+
+    db.execute(
+        "CREATE TABLE IF NOT EXISTS items ("
+        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "name TEXT,"
+        "quantity INTEGER,"
+        "price REAL,"
+        "deleted INTEGER DEFAULT 0);"
+    );
+
     bool running = true;
 
     while (running) {
