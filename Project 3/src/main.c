@@ -3,9 +3,12 @@
 #include "inventory_system.h"
 #include "database.h"
 #include "auth.h"
+#include "item.h"
 
 int system_start(void)
 {
+    Item item;
+
     printf("%s\n", APP_NAME);
     printf("Version %s\n", APP_VERSION);
 
@@ -18,6 +21,12 @@ int system_start(void)
     {
         return 1;
     }
+
+    item.id = 1;
+    item.quantity = 10;
+    snprintf(item.name, sizeof(item.name), "Keyboard");
+
+    item_create(&item);
 
     return 0;
 }
