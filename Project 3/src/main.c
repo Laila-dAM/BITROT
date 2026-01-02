@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "inventory_system.h"
 #include "database.h"
+#include "auth.h"
 
 int system_start(void)
 {
@@ -13,11 +14,17 @@ int system_start(void)
         return 1;
     }
 
+    if (auth_login("admin", "admin") != 0)
+    {
+        return 1;
+    }
+
     return 0;
 }
 
 int system_shutdown(void)
 {
+    auth_logout();
     db_close();
     return 0;
 }
