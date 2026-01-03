@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
+#include "item.h"
 
 static int running = 1;
 
@@ -13,6 +14,64 @@ static void show_menu(void)
     printf("4. View item\n");
     printf("0. Exit\n");
     printf("Select an option: ");
+}
+
+static void add_item(void)
+{
+    Item item;
+
+    printf("Item ID: ");
+    scanf("%d", &item.id);
+
+    printf("Item name: ");
+    scanf("%63s", item.name);
+
+    printf("Quantity: ");
+    scanf("%d", &item.quantity);
+
+    item_create(&item);
+}
+
+static void update_item(void)
+{
+    Item item;
+
+    printf("Item ID: ");
+    scanf("%d", &item.id);
+
+    printf("New name: ");
+    scanf("%63s", item.name);
+
+    printf("New quantity: ");
+    scanf("%d", &item.quantity);
+
+    item_update(&item);
+}
+
+static void delete_item(void)
+{
+    int id;
+
+    printf("Item ID: ");
+    scanf("%d", &id);
+
+    item_delete(id);
+}
+
+static void view_item(void)
+{
+    Item item;
+    int id;
+
+    printf("Item ID: ");
+    scanf("%d", &id);
+
+    if (item_get(id, &item) == 0)
+    {
+        printf("ID: %d\n", item.id);
+        printf("Name: %s\n", item.name);
+        printf("Quantity: %d\n", item.quantity);
+    }
 }
 
 void menu_start(void)
@@ -30,12 +89,5 @@ void menu_start(void)
 
         switch (option)
         {
-            case 0:
-                running = 0;
-                break;
-            default:
-                printf("Option not implemented\n");
-                break;
-        }
-    }
-}
+            case 1:
+                add_item();
