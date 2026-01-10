@@ -1,5 +1,4 @@
-build/
-*.db
-*.log
+/build
 *.o
 *.out
+*.db

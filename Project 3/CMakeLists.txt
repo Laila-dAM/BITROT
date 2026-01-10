@@ -1,15 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(inventory_management_cli C)
+project(stockcore_cli C)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-add_executable(inventory_management
-    src/main.c
-    src/database.c
-    src/auth.c
-    src/menu.c
+add_executable(stockcore
+    src/core/main.c
+    src/core/app.c
+    src/database/database.c
+    src/auth/auth.c
+    src/inventory/inventory.c
+    src/reports/reports.c
 )
+
+find_package(SQLite3 REQUIRED)
+
+target_link_libraries(stockcore SQLite::SQLite3)
