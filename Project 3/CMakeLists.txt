@@ -5,20 +5,11 @@ project(inventory_management_cli C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-include_directories(
-    include
-    src/db
-    src/auth
-    src/inventory
-    src/cli
-)
+include_directories(include)
 
 add_executable(inventory_management
     src/main.c
-    src/db/database.c
-    src/auth/auth.c
-    src/inventory/item.c
-    src/cli/menu.c
+    src/database.c
+    src/auth.c
+    src/menu.c
 )
-
-target_link_libraries(inventory_management sqlite3)
