@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.15)
-project(StockCore C)
+cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_C_STANDARD 11)
+project(stockcore C)
+
+set(CMAKE_C_STANDARD 99)
 
 find_package(SQLite3 REQUIRED)
 
@@ -9,4 +10,4 @@ add_executable(stockcore
     src/main.c
 )
 
-target_link_libraries(stockcore PRIVATE SQLite::SQLite3)
+target_link_libraries(stockcore SQLite::SQLite3)
