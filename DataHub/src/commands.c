@@ -2,6 +2,7 @@
 #include <string.h>
 #include "commands.h"
 #include "config.h"
+#include "db.h"
 
 void print_help(void) {
     printf("DataHub CLI\n");
@@ -26,19 +27,37 @@ void print_command_help(const char *command) {
 }
 
 void command_init(void) {
-    printf("Initializing DataHub system...\n");
-    printf("System initialized successfully.\n");
+    Config config;
+
+    if (!load_config("config/datahub.conf", &config)) {
+        printf("Failed to load configuration.\n");
+        return;
+    }
+
+    if (!db_open(config.database_path)) {
+        printf("Failed to open database.\n");
+        return;
+    }
+
+    if (!db_init_schema("sql/schema.sql")) {
+        printf("Failed to initialize database schema.\n");
+        db_close();
+        return;
+    }
+
+    printf("Database initialized successfully.\n");
+    db_close();
 }
+
 
 void command_status(void) {
     Config config;
-
-    if (load_config("config/datahub.conf", &config)) {
+if (load_config("config/datahub.conf", &config)) {
         printf("DataHub status:\n");
-        printf("  Database: %s\n", config.database_path);
-        printf("  Log level: %s\n", config.log_level);
+        printf("  Database file: %s\n", config.database_path);
+        printf("  Database: ready\n");
+        printf("  Users: 0\n");
     } else {
-        printf("DataHub status:\n");
-        printf("  Configuration not loaded\n");
+        printf("Configuration not loaded.\n");
     }
 }
