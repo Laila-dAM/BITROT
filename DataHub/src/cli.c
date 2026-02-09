@@ -5,25 +5,26 @@
 
 void handle_command(int argc, char *argv[]) {
     if (argc < 2) {
-        print_help();
+        cmd_help(argc, argv);
         return;
     }
 
     if (strcmp(argv[1], "help") == 0) {
-        if (argc == 3) {
-            print_command_help(argv[2]);
-        } else {
-            print_help();
-        }
+        cmd_help(argc, argv);
     }
     else if (strcmp(argv[1], "init") == 0) {
-        command_init();
+        cmd_init(argc, argv);
     }
     else if (strcmp(argv[1], "status") == 0) {
-        command_status();
+        cmd_status(argc, argv);
+    }
+    else if (strcmp(argv[1], "add-user") == 0) {
+        cmd_add_user(argc, argv);
+    }
+    else if (strcmp(argv[1], "list-users") == 0) {
+        cmd_list_users(argc, argv);   // 👈 novo
     }
     else {
-        printf("Error: unknown command '%s'\n", argv[1]);
-        printf("Run 'datahub help' to see available commands.\n");
+        printf("Comando desconhecido: %s\n", argv[1]);
     }
 }

@@ -1,11 +1,10 @@
-CC = gcc
-CFLAGS = -Iinclude -Wall -Wextra
-TARGET = datahub
-
-SRC = src/main.c
+CC=gcc
+CFLAGS=-Iinclude
+SRC=src/main.c src/cli.c src/commands.c
+OUT=datahub.exe
 
 all:
-	$(CC) $(SRC) $(CFLAGS) -o $(TARGET)
+	$(CC) $(SRC) $(CFLAGS) -o $(OUT)
 
 clean:
-	rm -f $(TARGET)
+	del datahub.exe
