@@ -1,32 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 #include "cli.h"
-
-static void show_help() {
-    printf("DataHub CLI\n");
-    printf("Commands:\n");
-    printf("  help      Show this help\n");
-    printf("  init      Initialize system\n");
-    printf("  status    Show system status\n");
-}
+#include "commands.h"
 
 void handle_command(int argc, char *argv[]) {
     if (argc < 2) {
-        show_help();
+        print_help();
         return;
     }
 
     if (strcmp(argv[1], "help") == 0) {
-        show_help();
+        if (argc == 3) {
+            print_command_help(argv[2]);
+        } else {
+            print_help();
+        }
     }
     else if (strcmp(argv[1], "init") == 0) {
-        printf("System initialized successfully.\n");
+        command_init();
     }
     else if (strcmp(argv[1], "status") == 0) {
-        printf("System status: OK\n");
+        command_status();
     }
     else {
-        printf("Unknown command: %s\n", argv[1]);
-        show_help();
+        printf("Error: unknown command '%s'\n", argv[1]);
+        printf("Run 'datahub help' to see available commands.\n");
     }
 }
