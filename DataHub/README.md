@@ -10,3 +10,16 @@ The project uses a relational database to persist data and demonstrates core sof
 
 ## Status
 Project in early development
+
+## Project structure
+
+- src/ — source code
+- include/ — header files
+- sql/ — database schema
+- docs/ — documentation
+- tests/ — tests
+
+## Build
+
+```bash
+make
