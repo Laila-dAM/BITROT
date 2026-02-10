@@ -3,13 +3,7 @@
 
 #include <sqlite3.h>
 
-int db_open(sqlite3 **db);
+sqlite3 *db_open(void);
 void db_close(sqlite3 *db);
-int db_init(sqlite3 *db);
-
-int db_add_user(sqlite3 *db,
-                const char *username,
-                const char *password,
-                const char *role);
 
 #endif

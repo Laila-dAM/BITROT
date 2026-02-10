@@ -10,6 +10,7 @@ CREATE TABLE users (
     role_id INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (role_id) REFERENCES roles(id)
+
 );
 
 CREATE TABLE permissions (

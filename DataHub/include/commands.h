@@ -1,10 +1,10 @@
 #ifndef COMMANDS_H
 #define COMMANDS_H
 
-void cmd_help(int argc, char *argv[]);
-void cmd_init(int argc, char *argv[]);
-void cmd_status(int argc, char *argv[]);
-void cmd_add_user(int argc, char *argv[]);
-void cmd_list_users(int argc, char *argv[]);   // 👈 novo
+void cmd_help(void);
+void cmd_init(void);
+void cmd_status(void);
+void cmd_add_user(const char *username, const char *password, const char *role);
+void cmd_list_users(void);
 
 #endif
