@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sqlite3.h>
 #include "commands.h"
+#include "auth.h"
 
 #define DB_FILE "datahub.db"
 
@@ -95,4 +96,18 @@ void cmd_list_users(void) {
 
     sqlite3_finalize(stmt);
     sqlite3_close(db);
+}
+
+void cmd_login(int argc, char *argv[]) {
+    if (argc < 4) {
+        printf("Usage: datahub login <username> <password>\n");
+        return;
+    }
+
+    if (auth_login(argv[2], argv[3])) {
+        printf("Login successful.\n");
+        printf("User: %s\n", auth_current_user());
+    } else {
+        printf("Invalid username or password.\n");
+    }
 }
