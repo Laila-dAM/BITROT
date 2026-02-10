@@ -1,54 +1,45 @@
 #include <stdio.h>
 #include <string.h>
 #include <sqlite3.h>
-#include "auth.h"
 
-static int authenticated = 0;
-static char current_user[50];
+#include "auth.h"
+#include "session.h"
 
 int auth_login(const char *username, const char *password) {
     sqlite3 *db;
     sqlite3_stmt *stmt;
-    int rc;
 
-    rc = sqlite3_open("datahub.db", &db);
-    if (rc != SQLITE_OK) {
-        printf("Database error.\n");
+    if (sqlite3_open("datahub.db", &db) != SQLITE_OK) {
+        printf("Erro ao abrir banco.\n");
         return 0;
     }
 
     const char *sql =
-        "SELECT password_hash FROM users WHERE username = ?;";
+        "SELECT users.username, roles.name "
+        "FROM users "
+        "JOIN roles ON users.role_id = roles.id "
+        "WHERE users.username = ? AND users.password_hash = ?;";
 
-    rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
-    if (rc != SQLITE_OK) {
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Erro na query.\n");
         sqlite3_close(db);
         return 0;
     }
 
     sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, password, -1, SQLITE_STATIC);
+
+    int result = 0;
 
     if (sqlite3_step(stmt) == SQLITE_ROW) {
-        const char *stored = (const char *)sqlite3_column_text(stmt, 0);
+        const char *user = (const char *)sqlite3_column_text(stmt, 0);
+        const char *role = (const char *)sqlite3_column_text(stmt, 1);
 
-        if (strcmp(stored, password) == 0) {
-            authenticated = 1;
-            strncpy(current_user, username, sizeof(current_user));
-            sqlite3_finalize(stmt);
-            sqlite3_close(db);
-            return 1;
-        }
+        session_start(user, role);
+        result = 1;
     }
 
     sqlite3_finalize(stmt);
     sqlite3_close(db);
-    return 0;
-}
-
-int auth_is_authenticated() {
-    return authenticated;
-}
-
-const char* auth_current_user() {
-    return current_user;
+    return result;
 }
