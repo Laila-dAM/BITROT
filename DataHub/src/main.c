@@ -1,24 +1,23 @@
 #include <stdio.h>
-#include <string.h>
+#include "core/app.h"
+#include "core/menu.h"
+#include "database/connection.h"
+#include "security/access_control.h"
+#include "utils/logger.h"
 
-#include "auth.h"
-#include "session.h"
-
-int main(int argc, char *argv[]) {
-    printf("DataHub CLI starting...\n");
-
-    if (argc == 4 && strcmp(argv[1], "login") == 0) {
-        if (auth_login(argv[2], argv[3])) {
-            printf("Login OK\n");
-            printf("User: %s | Role: %s\n",
-                   session_user(),
-                   session_role());
-        } else {
-            printf("Login inválido\n");
-        }
-        return 0;
+int main() {
+    if (db_connect() != 0) {
+        printf("Failed to connect to the database.\n");
+        return 1;
     }
 
-    printf("Comando desconhecido\n");
+    log_info("Application started");
+
+    app_initialize();
+    cli_main_menu();
+
+    log_info("Application exited");
+    db_disconnect();
+
     return 0;
 }

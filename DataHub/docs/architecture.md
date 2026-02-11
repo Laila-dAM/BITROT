@@ -1,82 +1,101 @@
-# DataHub System Architecture
+# DataHub Architecture
 
 ## Overview
 
-DataHub is a terminal-based application designed to simulate a corporate user and access control system.  
-The system follows a modular architecture to ensure maintainability, scalability, and clarity.
+DataHub is a command-line User and Access Control System with a layered architecture.  
+The system is designed to separate concerns, provide scalability, and simulate a real corporate environment.
 
-The application interacts with a relational database to persist data and enforce access rules.
-
----
-
-## High-Level Architecture
-
-The system is divided into the following main layers:
-
-- **CLI Layer**
-  - Handles user interaction
-  - Displays menus and messages
-  - Collects and validates input
-
-- **Application Logic Layer**
-  - Implements business rules
-  - Controls authentication and authorization
-  - Manages system workflows
-
-- **Database Layer**
-  - Executes SQL queries
-  - Manages connections
-  - Handles persistence and transactions
+The architecture is modular and divided into several layers: Core, Auth, Security, Models, Repositories, Services, Database, Reports, and Utils.
 
 ---
 
-## Core Modules
+## Layers
 
-### Authentication Module
-- User login and logout
-- Password hashing and verification
-- Session control
+### Core
+Handles application flow and interactive menus.  
+Coordinates user actions and routes requests to appropriate services.
 
-### Authorization Module
-- Role-based access control
-- Permission validation
-- Restricted operations
+### Auth
+Manages user authentication and session control.  
+Validates credentials and handles login and logout processes.
 
-### User Management Module
-- Create, read, update, and delete users
-- Assign roles to users
+### Security
+Handles password hashing and role-based access control.  
+Ensures users can only access authorized features.
 
-### Menu Module
-- Interactive terminal menus
-- Navigation logic
-- Error handling
+### Models
+Defines data structures that represent database entities:  
+- User  
+- Role  
+- Permission  
+- Role-Permission mapping  
+- User-Role mapping  
+- Access logs  
 
-### Reporting Module
-- SQL-based reports
-- Aggregated system data
+### Repositories
+Directly interacts with the database to perform CRUD operations.  
+Each repository corresponds to a model and contains methods for create, read, update, and delete.
+
+### Services
+Implements business logic and validation rules.  
+Coordinates data from repositories and enforces application rules and permissions.
+
+### Database
+Manages database connections and executes SQL queries.  
+Supports SQLite or MySQL as relational databases.  
+Contains initialization scripts, migrations, and seeds.
+
+### Reports
+Executes predefined SQL queries and formats the results for display in CLI.  
+Generates user lists, access logs, and role-permission mappings.
+
+### Utils
+Contains helper functions for input handling, validation, and logging.  
+Provides reusable utilities across all layers.
 
 ---
 
 ## Data Flow
 
-1. User interacts with the CLI menu
-2. Input is validated by the application layer
-3. Business rules are applied
-4. SQL queries are executed
-5. Results are returned to the CLI
+1. User interacts with CLI menu in Core layer.
+2. Auth layer validates login credentials.
+3. Security layer verifies user roles and permissions.
+4. Services layer applies business rules.
+5. Repositories layer executes CRUD operations in the Database layer.
+6. Reports layer fetches data and formats results for display.
 
 ---
 
-## Security Considerations
+## Database Entities
 
-- Passwords are never stored in plain text
-- Authentication data is protected
-- Access to system features is role-based
+- **users**: stores user information and credentials.  
+- **roles**: stores role definitions.  
+- **permissions**: stores permission definitions.  
+- **role_permissions**: maps roles to permissions.  
+- **user_roles**: maps users to roles.  
+- **access_logs**: tracks user logins and actions.
 
 ---
 
-## Future Improvements
+## Architecture Diagram
 
-- Logging system
-- Configuration files
-- Unit testing support
+```bash
+CLI <-> Core <-> Services <-> Repositories <-> Database
+|
+v
+Security
+|
+v
+Reports
+```
+
+
+---
+
+## Principles
+
+- Layered architecture with separation of concerns.  
+- Modular and scalable design for easy maintenance.  
+- Clear division between business logic, data access, and presentation.  
+- Secure authentication and role-based access control.  
+- CLI-focused but designed for future API expansion.
