@@ -1,0 +1,15 @@
+bootloader/boot.bin
+kernel/build/*
+mini-os.img
+
+*.o
+*.bin
+*.img
+*.elf
+*.map
+
+*.log
+*.tmp
+
+.DS_Store
+Thumbs.db
