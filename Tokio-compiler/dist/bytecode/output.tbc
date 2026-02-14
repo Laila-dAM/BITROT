@@ -1,0 +1,59 @@
+# Bytecode Header
+TOKIOBC v1.0
+STACK_SIZE 256
+VAR_COUNT 10
+
+# Constants
+CONST_INT 10
+CONST_INT 20
+CONST_INT 1
+CONST_INT 5
+CONST_INT 7
+CONST_INT 3
+
+# Instructions
+PUSH_CONST 0       # 10
+STORE_VAR n1
+PUSH_CONST 1       # 20
+STORE_VAR n2
+LOAD_VAR n1
+LOAD_VAR n2
+ADD
+STORE_VAR sum
+
+LOAD_VAR n1
+LOAD_VAR n2
+ADD
+PRINT
+
+PUSH_CONST 2       # 1
+STORE_VAR factorial
+PUSH_CONST 3       # 1 (i)
+LABEL loop_start
+LOAD_VAR factorial
+LOAD_VAR i
+MUL
+STORE_VAR factorial
+LOAD_VAR i
+PUSH_CONST 4       # 5
+CMP_LE
+JUMP_IF_FALSE loop_end
+LOAD_VAR i
+PUSH_CONST 5       # 1
+ADD
+STORE_VAR i
+JUMP loop_start
+LABEL loop_end
+LOAD_VAR factorial
+PRINT
+
+LOAD_VAR 7         # a
+LOAD_VAR 8         # b
+MUL
+LOAD_VAR sum
+ADD
+STORE_VAR result
+LOAD_VAR result
+PRINT
+
+HALT

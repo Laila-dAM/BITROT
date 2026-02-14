@@ -1,0 +1,6 @@
+func main() {
+    var greeting = "Hello, Tokio!"
+    print(greeting)
+}
+
+main()

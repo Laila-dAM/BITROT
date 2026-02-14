@@ -1,0 +1,23 @@
+func main() {
+    var i = 0
+    while (i < 5) {
+        print("Current i: " + i)
+        i = i + 1
+    }
+
+    for var j = 0; j < 5; j = j + 1 {
+        print("Current j: " + j)
+    }
+
+    var k = 0
+    while (k < 3) {
+        var inner = 0
+        while (inner < 2) {
+            print("k: " + k + ", inner: " + inner)
+            inner = inner + 1
+        }
+        k = k + 1
+    }
+}
+
+main()

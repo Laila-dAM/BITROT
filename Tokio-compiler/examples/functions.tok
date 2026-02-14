@@ -1,0 +1,25 @@
+func add(a, b) {
+    return a + b
+}
+
+func multiply(x, y) {
+    return x * y
+}
+
+func compute(n) {
+    var result = add(n, 10)
+    result = multiply(result, 2)
+    return result
+}
+
+func main() {
+    var value1 = add(5, 3)
+    var value2 = multiply(4, 6)
+    var value3 = compute(7)
+
+    print("add(5, 3) = " + value1)
+    print("multiply(4, 6) = " + value2)
+    print("compute(7) = " + value3)
+}
+
+main()

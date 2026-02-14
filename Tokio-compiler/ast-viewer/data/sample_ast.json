@@ -1,0 +1,39 @@
+{
+  "type": "Program",
+  "name": "HelloWorld",
+  "children": [
+    {
+      "type": "FunctionDeclaration",
+      "name": "main",
+      "children": [
+        {
+          "type": "VariableDeclaration",
+          "name": "message",
+          "children": [
+            {
+              "type": "Literal",
+              "name": "\"Hello, Tokio!\"",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "ExpressionStatement",
+          "children": [
+            {
+              "type": "FunctionCall",
+              "name": "print",
+              "children": [
+                {
+                  "type": "Identifier",
+                  "name": "message",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
