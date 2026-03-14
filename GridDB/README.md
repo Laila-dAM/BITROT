@@ -1,13 +1,11 @@
-# 💾 GridDB
+# GridDB
 
 > A lightweight database engine built from scratch in C++
 > Binary storage • Custom query engine • Indexing • Modular architecture
 
-![banner](docs/screenshots/banner.png)
-
 ---
 
-## 🌐 Overview
+## Overview
 
 **GridDB** is a mini database engine developed from scratch in C++, designed to demonstrate deep knowledge of systems programming, storage engines, and internal database architecture.
 
@@ -21,7 +19,7 @@ GridDB is part of a low-level systems portfolio that includes:
 
 ---
 
-## 🧠 Core Goals
+## Core Goals
 
 * Build a database engine from zero
 * Implement binary file storage (.db)
@@ -33,7 +31,7 @@ GridDB is part of a low-level systems portfolio that includes:
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 GridDB follows a layered internal architecture inspired by real-world database systems:
 
@@ -55,16 +53,16 @@ Each module is isolated to ensure scalability, maintainability, and clear separa
 
 ---
 
-## 💽 Features
+## Features
 
-### 🗄 Storage Engine
+### Storage Engine
 
 * Binary file persistence
 * Custom serialization and deserialization
 * Page-based storage system (planned)
 * Efficient file I/O using fstream (binary mode)
 
-### 🔍 Query System
+### Query System
 
 * SQL-like syntax
 * Lexer and parser from scratch
@@ -80,13 +78,13 @@ SELECT * FROM users;
 DELETE FROM users WHERE id = 1;
 ```
 
-### ⚡ Indexing
+### Indexing
 
 * Hash index (planned)
 * B-Tree index (advanced)
 * Fast record lookup using file offsets
 
-### 🧱 Internal Components
+### Internal Components
 
 * Database manager
 * Table abstraction
@@ -97,7 +95,7 @@ DELETE FROM users WHERE id = 1;
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 GridDB/
@@ -178,7 +176,7 @@ GridDB/
 
 ---
 
-## ⚙️ Build & Run
+## Build & Run
 
 ### Requirements
 
@@ -203,7 +201,7 @@ make
 
 ---
 
-## 🖥 CLI Example
+## CLI Example
 
 ```
 GridDB v0.1
@@ -223,7 +221,7 @@ Planned internal commands:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 GridDB includes unit tests for core components:
 
@@ -240,7 +238,7 @@ ctest
 
 ---
 
-## 📀 Storage Format (Concept)
+## Storage Format (Concept)
 
 GridDB uses a custom binary file format:
 
@@ -263,22 +261,7 @@ This design enables fast lookups and efficient disk usage.
 
 ---
 
-## 🚀 Roadmap
-
-* [x] Project architecture design
-* [ ] File manager (binary I/O)
-* [ ] Table and row system
-* [ ] Query parser (SQL-like)
-* [ ] Query executor
-* [ ] Persistent storage
-* [ ] Hash indexing
-* [ ] B-Tree indexing
-* [ ] Page cache system
-* [ ] Transaction support (optional)
-
----
-
-## 🎯 Educational Value
+## Educational Value
 
 GridDB demonstrates:
 
@@ -293,7 +276,7 @@ This project is intended for learning how real database engines operate internal
 
 ---
 
-## 🎨 Aesthetic Direction
+## Aesthetic Direction
 
 Design inspiration:
 
